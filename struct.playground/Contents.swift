@@ -36,3 +36,9 @@ var square = Square()
 if let first = Int("4"), let second = Int("42"),first < second && second < 100 {
     print("\(first) < \(second) < 100")
 }
+
+func foo(label1 name1: String, label2 name2: Int)->String{
+    let string = name1 + String(name2)
+    return string
+}
+print(foo(label1: "Hey, ", label2: 2))
