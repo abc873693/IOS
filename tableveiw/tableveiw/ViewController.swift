@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
-    var data = ["Ray","Bob","Billy","Jay","Rcok","Zack"]
+    var data = ["Ray","Bob","Billy","Jay","Rcok","Zack","Ray","Bob","Billy","Jay","Rcok","Zack","Ray","Bob","Billy","Jay","Rcok","Zack","Ray","Bob","Billy","Jay","Rcok","Zack"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         let identifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         cell.textLabel?.text = data[indexPath.row]
-        cell.imageView?.image = UIImageView(name:"cafe")
+        //cell.imageView?.image = UIImage(name:"#imageLiteral(resourceName: "upstate")")
         return cell
     }
     
