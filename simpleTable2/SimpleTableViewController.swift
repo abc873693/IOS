@@ -61,7 +61,7 @@ class SimpleTableViewController: UITableViewController {
         }
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
-        cell.backgroundColor = UIColor.lightGray
+        //cell.backgroundColor = UIColor.lightGray
         return cell
     }
     
@@ -71,17 +71,47 @@ class SimpleTableViewController: UITableViewController {
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType = .none
             self.data_visited[indexPath.row] = false
-            tableView.deselectRow(at: indexPath, animated: false)
         })
         let okAction = UIAlertAction(title:"OK",style: .default,handler:{(alert:UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType = .checkmark
             self.data_visited[indexPath.row] = true
-            tableView.deselectRow(at: indexPath, animated: false)
             })
         optionMenu.addAction(cancelAction)
         optionMenu.addAction(okAction)
         self.present(optionMenu,animated: true,completion: nil)
+        //tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style:.default,title:"Share",handler:{(action,indexPath)->Void in
+                let shareText = "I'm " + self.data[indexPath.row]
+            if let shareImage = UIImage(named:self.data_image[indexPath.row%10]){
+                let activityCotroller = UIActivityViewController(activityItems: [shareText,shareImage], applicationActivities: nil)
+                self.present(activityCotroller,animated:true, completion: nil)
+            }else{
+                let activityCotroller = UIActivityViewController(activityItems: [shareText], applicationActivities: nil)
+                self.present(activityCotroller,animated:true, completion: nil)
+            }
+            })
+        let deleteAction = UITableViewRowAction(style:.default,title:"Delete",handler:{(action,indexPath)->Void in
+            self.data.remove(at: indexPath.row)
+            self.data_visited.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            })
+        deleteAction.backgroundColor = UIColor.red
+        shareAction.backgroundColor = UIColor.blue
+        return [deleteAction,shareAction]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailView"{
+            if let indexpath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! DetailViewController
+                destinationController.imageName = data_image[indexpath.row%10]
+            }
+        }
         
     }
     
@@ -104,7 +134,10 @@ class SimpleTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
             data.remove(at: indexPath.row)
             data_visited.remove(at: indexPath.row)
-        } else if editingStyle == .insert {
+        }//else if editingStyle == .share {
+            
+        //}
+        else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }

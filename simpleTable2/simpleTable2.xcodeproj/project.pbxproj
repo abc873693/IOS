@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C95E8E1DD49E090000E11A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C95E8D1DD49E090000E11A /* DetailViewController.swift */; };
 		16CB89051DCB564500D68905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB89041DCB564500D68905 /* AppDelegate.swift */; };
 		16CB890A1DCB564500D68905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB89081DCB564500D68905 /* Main.storyboard */; };
 		16CB890C1DCB564500D68905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CB890B1DCB564500D68905 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16C95E8D1DD49E090000E11A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		16CB89011DCB564500D68905 /* simpleTable2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleTable2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CB89041DCB564500D68905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16CB89091DCB564500D68905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				16CB890D1DCB564500D68905 /* LaunchScreen.storyboard */,
 				16CB89101DCB564500D68905 /* Info.plist */,
 				16CB891A1DCB610400D68905 /* SimpleTableViewCell.swift */,
+				16C95E8D1DD49E090000E11A /* DetailViewController.swift */,
 			);
 			path = simpleTable2;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				16CB891B1DCB610400D68905 /* SimpleTableViewCell.swift in Sources */,
 				16CB89051DCB564500D68905 /* AppDelegate.swift in Sources */,
 				16CB89171DCB575300D68905 /* SimpleTableViewController.swift in Sources */,
+				16C95E8E1DD49E090000E11A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +305,7 @@
 				16CB89151DCB564500D68905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
