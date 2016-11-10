@@ -51,7 +51,7 @@
                                     <outlet property="content" destination="AVY-y9-jsD" id="udS-Gv-bmc"/>
                                     <outlet property="picture" destination="G1z-cf-Odt" id="OX9-BC-Pqj"/>
                                     <outlet property="title" destination="BsS-Ag-eEr" id="b5n-DR-DKK"/>
-                                    <segue destination="fra-oW-Hxt" kind="showDetail" identifier="showDetailView" id="eDi-kv-eAh"/>
+                                    <segue destination="fra-oW-Hxt" kind="show" identifier="showDetailView" id="MYn-Q3-VHO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0Q-kf-SnU">
-                                <frame key="frameInset" minX="154" minY="411" width="42" height="22"/>
+                                <frame key="frameInset" minX="166" minY="411" width="42" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
