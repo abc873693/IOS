@@ -8,16 +8,15 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     @IBOutlet weak var picture :UIImageView!
-    @IBOutlet weak var context: UILabel!
-    var imageName = ""
+    var restaurant:Restaurant!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        picture.image = UIImage(named:imageName)
-        context.text = imageName
+        picture.image = UIImage(named:restaurant.image!)
+        //context.text = restaurant.type
         // Do any additional setup after loading the view.
     }
 
@@ -26,6 +25,32 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DetailViewCell
+        switch indexPath.row {
+        case 0:
+            cell.fieldLabel.text = "Name"
+            cell.valueLabel.text = restaurant.name!
+        case 1:
+            cell.fieldLabel.text = "type"
+            cell.valueLabel.text = restaurant.type!
+        case 2:
+            cell.fieldLabel.text = "location"
+            cell.valueLabel.text = restaurant.location!
+        case 3:
+            cell.fieldLabel.text = "isVisited"
+            cell.valueLabel.text = (restaurant.isVisited!) ?"Yes":"No"
+        default:
+            cell.fieldLabel.text = "Default"
+            cell.valueLabel.text = "Default"
+        }
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
 
     /*
     // MARK: - Navigation

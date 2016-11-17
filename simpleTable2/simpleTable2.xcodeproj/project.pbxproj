@@ -14,6 +14,8 @@
 		16CB890F1DCB564500D68905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CB890D1DCB564500D68905 /* LaunchScreen.storyboard */; };
 		16CB89171DCB575300D68905 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB89161DCB575300D68905 /* SimpleTableViewController.swift */; };
 		16CB891B1DCB610400D68905 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CB891A1DCB610400D68905 /* SimpleTableViewCell.swift */; };
+		16DBC4281DDDC5580059DDD0 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC4271DDDC5580059DDD0 /* Restaurant.swift */; };
+		16DBC42C1DDDD8450059DDD0 /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DBC42B1DDDD8450059DDD0 /* DetailViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		16CB89101DCB564500D68905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16CB89161DCB575300D68905 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTableViewController.swift; path = ../SimpleTableViewController.swift; sourceTree = "<group>"; };
 		16CB891A1DCB610400D68905 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		16DBC4271DDDC5580059DDD0 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		16DBC42B1DDDD8450059DDD0 /* DetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				16CB89101DCB564500D68905 /* Info.plist */,
 				16CB891A1DCB610400D68905 /* SimpleTableViewCell.swift */,
 				16C95E8D1DD49E090000E11A /* DetailViewController.swift */,
+				16DBC4271DDDC5580059DDD0 /* Restaurant.swift */,
+				16DBC42B1DDDD8450059DDD0 /* DetailViewCell.swift */,
 			);
 			path = simpleTable2;
 			sourceTree = "<group>";
@@ -142,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DBC4281DDDC5580059DDD0 /* Restaurant.swift in Sources */,
 				16CB891B1DCB610400D68905 /* SimpleTableViewCell.swift in Sources */,
 				16CB89051DCB564500D68905 /* AppDelegate.swift in Sources */,
+				16DBC42C1DDDD8450059DDD0 /* DetailViewCell.swift in Sources */,
 				16CB89171DCB575300D68905 /* SimpleTableViewController.swift in Sources */,
 				16C95E8E1DD49E090000E11A /* DetailViewController.swift in Sources */,
 			);
