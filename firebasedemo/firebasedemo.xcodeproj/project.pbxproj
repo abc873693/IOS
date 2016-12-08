@@ -46,6 +46,8 @@
 		16FFA4251DF9862C002BDBDA /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
 		16FFA4281DF986C4002BDBDA /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Firebase; sourceTree = "<group>"; };
 		16FFA42A1DF98F49002BDBDA /* DatabaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
+		16FFA42C1DF99859002BDBDA /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		16FFA42D1DF99859002BDBDA /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,8 @@
 		16AF68D11DF974DE00DD33EE /* firebasedemo */ = {
 			isa = PBXGroup;
 			children = (
+				16FFA42C1DF99859002BDBDA /* Firebase.h */,
+				16FFA42D1DF99859002BDBDA /* module.modulemap */,
 				16FFA4281DF986C4002BDBDA /* Firebase */,
 				16AF68EB1DF97EBA00DD33EE /* frameworks */,
 				16AF68D21DF974DE00DD33EE /* AppDelegate.swift */,

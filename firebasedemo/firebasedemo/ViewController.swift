@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseAnalytics
 import FirebaseAuth
 
 class ViewController: UIViewController {
@@ -17,7 +16,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FIRApp.configure()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -29,7 +27,8 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         indicator.isHidden = false
         indicator.startAnimating()
-        
+        indicator.stopAnimating()
+        indicator.isHidden = true
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -55,6 +54,8 @@ class ViewController: UIViewController {
                 self.present(quetion, animated: true, completion: nil);
             }
         }
+        indicator.stopAnimating()
+        indicator.isHidden = true
     }
     
     
